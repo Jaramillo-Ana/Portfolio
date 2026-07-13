@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ana Jaramillo Portfolio - Robotic Ball Interception</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">
+						<span class="title">Ana Jaramillo</span>
+					</a>
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="involvement.html">Involvement</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<h1>Robotic Ball Interception and Targeting</h1>
+					<p><strong>ME/CS/EE 133 Robotics Project</strong></p>
+
+					<!-- Replace the file name below with the name of your MP4 if needed. -->
+					<section style="text-align: center; margin: 2rem 0;">
+						<video controls playsinline preload="metadata"
+							style="width: 100%; max-width: 900px; height: auto; border-radius: 4px;"
+							poster="images/133poster.png">
+							<source src="downloads/videoME133a.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</section>
+
+					<h2>Project Overview</h2>
+					<p>
+						For this project, my team developed a robotic system that uses a Franka Panda arm
+						to intercept a falling ball and hit it toward a randomly generated target. The robot
+						must predict where and when the ball can be reached, move the paddle smoothly to the
+						intercept point, and orient the paddle so that the ball leaves in the direction of the goal.
+						Because the ball and goal positions change each round, the robot must create a new plan
+						for every attempt.
+					</p>
+
+					<h2>System Design</h2>
+					<p>
+						We modeled the motion of the ball under gravity and predicted the time at which it would
+						reach a feasible interception height. The controller then calculated the required paddle
+						position, orientation, and velocity. A momentum-based collision model was used to relate
+						the motion of the paddle to the desired outgoing velocity of the ball.
+					</p>
+					<p>
+						The Franka Panda's seven revolute joints were combined with two additional prismatic
+						joints at the paddle, giving the system nine degrees of freedom. The additional joints
+						expanded the usable paddle area and helped the robot reach more possible ball locations.
+						We also modified the robot's URDF and paddle geometry so that the visual model,
+						kinematics, and collision surface were correctly aligned.
+					</p>
+
+					<h2>Motion Planning and Control</h2>
+					<ul>
+						<li>Predicted the ball's future position and velocity using projectile motion.</li>
+						<li>Calculated the paddle normal and launch velocity needed to send the ball toward the goal.</li>
+						<li>Used iterative inverse kinematics with a weighted damped pseudoinverse to solve for the robot configuration.</li>
+						<li>Applied null-space projection so the secondary joint-centering objective did not interfere with the main interception task.</li>
+						<li>Generated smooth joint motion with cubic splines for both the strike and return trajectories.</li>
+						<li>Checked workspace, timing, and convergence limits before executing each plan.</li>
+					</ul>
+
+					<h2>My Contribution</h2>
+					<p>
+						I worked with my teammates on the system modeling, inverse-kinematics implementation,
+						trajectory planning, collision calculations, testing, and analysis. The project brought
+						together robot kinematics, dynamics, numerical methods, task-space control, and simulation
+						in one complete system.
+					</p>
+
+					<p><strong>Skills:</strong> Python, robotic kinematics, inverse kinematics, Jacobians, trajectory planning, cubic splines, collision modeling, URDF editing, simulation, and task-space control</p>
+
+					<ul class="actions">
+						<li><a href="downloads/133a_report.pdf" target="_blank" class="button">View Final Report</a></li>
+					</ul>
+
+					<section style="margin-top: 2rem; text-align: center;">
+						<a href="projects.html" class="button primary">Back to Projects</a>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

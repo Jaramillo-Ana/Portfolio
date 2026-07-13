@@ -11,6 +11,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* --- Embedded PDF (Publications section) --- */
+			.pdf-embed {
+				margin: 1.5rem 0 2rem;
+			}
+			.pdf-embed h3 {
+				margin-bottom: 0.25rem;
+			}
+			.pdf-embed .pdf-meta {
+				margin-bottom: 0.75rem;
+				opacity: 0.8;
+				font-size: 0.9rem;
+			}
+			.pdf-embed iframe {
+				width: 100%;
+				height: 500px;
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 4px;
+				background: #fff; /* PDF canvas is white regardless of page theme */
+			}
+			.pdf-embed a {
+				display: inline-block;
+				margin-top: 0.5rem;
+				font-size: 0.85rem;
+				margin-right: 1rem;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -91,6 +118,17 @@
 										</div>
 									</a>
 								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/ME72_robot.JPEG" alt="Pharaobots ME 72 competition robots climbing the pyramid" />
+									</span>
+									<a href="me72_capstone.html">
+										<h2>ME 72 Robotics Capstone</h2>
+										<div class="content">
+											<p>Competition-winning robotic systems designed, manufactured, programmed, and tested for Caltech's two-term mechanical engineering capstone.</p>
+										</div>
+									</a>
+								</article>
 								<article class="style1">
 									
 									<span class="image">
@@ -103,17 +141,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/front_gear.png" alt="" />
-									</span>
-									<a href="transmission.html">
-										<h2>Transmission</h2>
-										<div class="content">
-											<p>Mechanical transmission for a DC motor-powered bicycle wheel under budget and desing constraints</p>
-										</div>
-									</a>
-								</article>
+								
 								
 								
 
@@ -129,6 +157,19 @@
 								<section style="margin-top: 2rem; text-align: center;">
 									<a href="experience.html" class="button primary">Learn More</a>
 								</section>
+							</section>
+
+							<!-- Publications -->
+							<section>
+								<h2>Publications</h2>
+								<div class="pdf-embed">
+									<strong>Enantioselective Synthesis of β-Amino Acids via Directed Evolution</strong>
+									<p class="pdf-meta">Published in <em>Angewandte Chemie</em> — Caltech Arnold Lab</p>
+									
+									
+									<a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.202525505" target="_blank" rel="noopener noreferrer">View on publisher site ↗</a>
+								</div>
+							</section>
 						</div>
 					</div>
 

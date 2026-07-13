@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ana Jaramillo Portfolio - ME 72 Robotics Capstone</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* --- Gallery image sizing fix ---
+			   The site's .image.fit class scales images to their natural
+			   aspect ratio, which looks inconsistent when photos are a mix
+			   of landscape/portrait/square. This forces every gallery image
+			   into a uniform, cropped box so the grid stays even and doesn't
+			   jump around while images load. */
+			.box.alt .image.fit {
+				display: block;
+				position: relative;
+				aspect-ratio: 4 / 3;
+				overflow: hidden;
+				border-radius: 4px;
+				background: #111; /* placeholder color while loading */
+			}
+			.box.alt .image.fit img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;   /* crop to fill box instead of stretching */
+				object-position: center;
+			}
+
+			/* --- Hero photo row (top 3 images): bigger, taller boxes so less
+			   of each photo gets cropped away and they read larger on the page --- */
+			.hero-gallery .image.fit {
+				aspect-ratio: 1 / 1;
+				min-height: 320px;
+			}
+			@media (max-width: 736px) {
+				.hero-gallery .image.fit {
+					min-height: 220px;
+				}
+			}
+
+			/* --- Embedded PDF grid (replaces the old download buttons) --- */
+			.pdf-embed-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+				margin: 1.5rem 0 2rem;
+			}
+			@media (max-width: 736px) {
+				.pdf-embed-grid {
+					grid-template-columns: 1fr; /* stack on narrow screens */
+				}
+			}
+			.pdf-embed h3 {
+				margin-bottom: 0.5rem;
+			}
+			.pdf-embed iframe {
+				width: 100%;
+				height: 500px;
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 4px;
+				background: #fff; /* PDF canvas is white regardless of page theme */
+			}
+			.pdf-embed a {
+				display: inline-block;
+				margin-top: 0.5rem;
+				font-size: 0.85rem;
+			}
+
+			/* --- Video demo grid: 2 per row, 3 rows for 6 clips --- */
+			.video-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			@media (max-width: 736px) {
+				.video-grid {
+					grid-template-columns: 1fr; /* stack on narrow screens */
+				}
+			}
+			.video-grid .video-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.video-grid video {
+				width: 100%;
+				height: auto;
+				border-radius: 4px;
+				background: #000;
+			}
+			.video-grid .video-caption {
+				margin-top: 0.5rem;
+				font-size: 0.85rem;
+				text-align: center;
+				opacity: 0.8;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">
+						<span class="title">Ana Jaramillo</span>
+					</a>
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="involvement.html">Involvement</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<h1>ME 72 Robotics Capstone</h1>
+					<p><strong>Apex Cleanup: Summit, Mint, Bank | Competition Champions</strong><br />
+					ME 72a/b Engineering Design Laboratory | September 2025 – March 2026</p>
+
+					<!-- Replace the image names below with your own files. -->
+					<div class="box alt hero-gallery">
+						<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="images/winners.JPEG" alt="The Pharaobots team with the ME 72 competition trophy" loading="lazy" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/ME72_robot.JPEG" alt="The two Pharaobots competition robots" loading="lazy" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/competition2.JPEG" alt="Robots competing on the ME 72 pyramid field" loading="lazy" /></span></div>
+						</div>
+					</div>
+
+					<h2>Project Overview</h2>
+					<p>
+						ME 72 is Caltech's two-term mechanical engineering capstone. Over five and a half months, my team
+						ran the full design cycle: requirements, concept generation, design reviews, fabrication, electronics
+						integration, autonomous programming, testing, and iteration. The course ended in a public competition.
+						Our team, the <strong>Pharaobots</strong>, placed first with the tournament's highest score.
+					</p>
+					<p>
+						Our team of seven built two competition robots on a limited budget and tight schedule. The robots had
+						to collect objects, climb a steel pyramid, deposit payload at the summit, and hold up under direct
+						contact with other robots.
+					</p>
+
+					<h2>The Competition</h2>
+					<p>
+						The 2026 challenge, <em>Apex Cleanup: Summit, Mint, Bank</em>, featured a four-foot steel pyramid with
+						37-degree inclined faces and a narrow summit platform. Robots collected Hot Pellets from the field and
+						delivered them to the summit, converting them into Energy Credits. Credits were banked at ground-level
+						vaults for points. Matches opened with a 30-second autonomous period, then switched to teleop. With
+						multiple robots per field, every design needed traction, stability, structural strength,
+						maneuverability, and impact resistance.
+					</p>
+					<ul>
+						<li>Two robots per team</li>
+						<li>Autonomous and teleoperated play</li>
+						<li>Pellet collection, transport, and summit deposition</li>
+						<li>Climbing a 37-degree steel incline</li>
+						<li>Competing in a crowded, contact-heavy arena</li>
+						<li>Strict budget, schedule, size, and weight limits</li>
+					</ul>
+
+					<h2>My Role</h2>
+					<h3>Engineering Lead — Fall Term</h3>
+					<p>
+						I served as engineering lead. I organized the design process, tracked progress, coordinated subteams,
+						and kept concepts on track for full robot integration. Fall term's key milestone: finalize the system
+						design and demonstrate a working drivetrain. I reviewed CAD, manufacturing plans, and design decisions
+						to hit that milestone and the critical design review.
+					</p>
+
+					<h3>Electronics and Autonomy — Winter Term</h3>
+					<p>
+						Winter term, I moved to electronics and took ownership of autonomy. This grew into full electronics
+						work for both robots: wiring, power distribution, motor control, sensors, microcontroller code,
+						debugging, and integration. I programmed and tested the autonomous sequence, then handled electrical
+						and control issues through competition prep.
+					</p>
+					<p>
+						On competition day, I drove one robot. That meant knowing its handling, limits, and scoring strategy
+						well enough to make fast calls under pressure while coordinating with our second driver.
+					</p>
+
+					<h2>Engineering Process</h2>
+					<ol>
+						<li><strong>Requirements and strategy:</strong> Read the rules, identified scoring opportunities, converted them into engineering requirements.</li>
+						<li><strong>Concept generation:</strong> Compared drivetrain, intake, climbing, storage, and deposition concepts via sketches, calculations, prototypes, and design reviews.</li>
+						<li><strong>Detailed design:</strong> Built CAD assemblies and manufacturing drawings — tolerances, fasteners, interfaces, serviceability, DFM.</li>
+						<li><strong>Fabrication:</strong> Machined parts manually and on CNC, waterjet, laser cutter, and 3D printer.</li>
+						<li><strong>Integration:</strong> Combined mechanical, electrical, and software systems; fixed issues invisible at the subsystem level.</li>
+						<li><strong>Testing and iteration:</strong> Repeatedly tested climbing, collection, scoring, autonomy, and durability; revised weak components.</li>
+						<li><strong>Competition strategy:</strong> Built match plans, driver coordination, repair procedures, spare parts, and troubleshooting workflows.</li>
+					</ol>
+
+					<h2>Project Gallery</h2>
+					<p>CAD, manufacturing, electronics, testing, and competition photos from the build.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="images/isometricCAD.png" alt="ME 72 robot CAD assembly" loading="lazy" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/top view.png" alt="Manufacturing components for the ME 72 robots" loading="lazy" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/topview.png" alt="Robot electronics and wiring" loading="lazy" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/electronics.JPG" alt="Testing a robot on the pyramid" loading="lazy" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/competiton1.JPEG" alt="Testing the autonomous routine" loading="lazy" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/me72_winners.jpg" alt="The winning Pharaobots team" loading="lazy" /></span></div>
+						</div>
+					</div>
+
+					<!-- Video demos, 2 per row. Replace file names below with your own MP4/MOV clips as needed. -->
+					<h2>Video Demos</h2>
+					<div class="video-grid">
+						<div class="video-item">
+							<video controls playsinline preload="metadata">
+								<source src="downloads/mobilityDemo.MOV" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-caption">Mobility Demonstration</div>
+						</div>
+						<div class="video-item">
+							<video controls playsinline preload="metadata">
+								<source src="downloads/climbingDemo.MOV" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-caption">Climbing Demonstration</div>
+						</div>
+						<div class="video-item">
+							<video controls playsinline preload="metadata">
+								<source src="downloads/backdoor.MOV" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-caption">Backdoor Demonstration</div>
+						</div>
+						<div class="video-item">
+							<video controls playsinline preload="metadata">
+								<source src="downloads/intake.MOV" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-caption">Intake Demonstration</div>
+						</div>
+						<div class="video-item">
+							<video controls playsinline preload="metadata">
+								<source src="downloads/braci.MOV" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-caption">Brachi Demonstration</div>
+						</div>
+						<div class="video-item">
+							<video controls playsinline preload="metadata">
+								<source src="downloads/autonomous demo.MOV" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-caption">Autonomous/Line Follow Demonstration</div>
+						</div>
+					</div>
+
+					<h2>Challenges and Lessons Learned</h2>
+					<p>
+						System integration was the biggest challenge. Mechanisms that worked alone often failed on the full
+						robot. Weight distribution affected climbing, mechanical changes affected wiring, electrical noise
+						affected control, and small manufacturing errors caused alignment or reliability issues. Lesson:
+						design interfaces early, test full systems as soon as possible, document changes, and leave time to
+						iterate — don't assume the first design works.
+					</p>
+					<p>
+						Leading in fall and building electronics in winter gave me both high-level coordination and hands-on
+						execution experience. I learned to trade off under time and budget pressure, communicate across
+						subteams, prioritize by risk, and keep improving a system through unexpected failures.
+					</p>
+
+					<h2>Competition Result</h2>
+					<p>
+						The Pharaobots won the 41st Annual ME 72 Engineering Design Competition with the tournament's highest
+						score. The win came from months of design, fabrication, debugging, and late-stage iteration. More
+						importantly, it gave me experience taking two robotic systems from concept through a public
+						competition.
+					</p>
+
+					<!-- YouTube Video -->
+					<h2>Competition Video</h2>
+					<section style="text-align: center; margin: 2rem 0;">
+						<div style="position: relative; width: 100%; max-width: 900px; margin: 0 auto; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+							<iframe
+								src="https://www.youtube.com/embed/z9KzYfBsQX4?start=2"
+								title="Caltech ME 72 Engineering Design Competition"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen>
+							</iframe>
+						</div>
+					</section>
+
+					<h2>Skills and Tools</h2>
+					<p><strong>Mechanical Design:</strong> SolidWorks CAD, GD&amp;T, mechanism design, drivetrain design, tolerance analysis, DFM, design reviews, prototyping, and system integration</p>
+					<p><strong>Manufacturing:</strong> Manual mill, lathe, CNC mill, waterjet, laser cutter, 3D printing, drilling, tapping, assembly, and inspection</p>
+					<p><strong>Electronics and Controls:</strong> Arduino programming, autonomous routines, motor controllers, sensors, wiring, soldering, power distribution, battery selection, LiPo battery safety, and electrical troubleshooting</p>
+					<p><strong>Project Execution:</strong> Engineering leadership, task planning, documentation, budgeting, procurement, interdisciplinary teamwork, testing, debugging, competition strategy, and technical communication</p>
+
+					<h2>Documentation and Links</h2>
+					<ul class="actions" style="flex-wrap: wrap;">
+						<li><a href="https://me72.caltech.edu/" target="_blank" rel="noopener noreferrer" class="button">Competition Website</a></li>
+						<li><a href="https://www.caltech.edu/about/news/climbing-to-the-top-inside-caltechs-41st-annual-me-72-student-engineering-competition" target="_blank" rel="noopener noreferrer" class="button">Caltech Article</a></li>
+						<li><a href="https://www.youtube.com/watch?v=z9KzYfBsQX4&t=2s" target="_blank" rel="noopener noreferrer" class="button">Watch on YouTube</a></li>
+					</ul>
+
+					<!-- Add your PDFs to the downloads folder and rename these links/filenames as needed. -->
+					<div class="pdf-embed-grid">
+						<div class="pdf-embed">
+							<h3>Final Report</h3>
+							<iframe src="downloads/Informe Final ME72 PharaoBots (1).pdf" title="Final Report PDF" loading="lazy"></iframe>
+							<a href="downloads/Informe Final ME72 PharaoBots (1).pdf" target="_blank" rel="noopener noreferrer">Open full size ↗</a>
+						</div>
+						<div class="pdf-embed">
+							<h3>Engineering Notebook A</h3>
+							<!-- Hosted on Google Drive since the file was too large for GitHub. -->
+							<iframe src="https://drive.google.com/file/d/14A6Pncs9WUym6i2PGAk5lw2xCW_lf1f2/preview" title="Engineering Notebook A PDF" loading="lazy" allow="autoplay"></iframe>
+							<a href="https://drive.google.com/file/d/14A6Pncs9WUym6i2PGAk5lw2xCW_lf1f2/view?usp=sharing" target="_blank" rel="noopener noreferrer">Open full size ↗</a>
+						</div>
+						<div class="pdf-embed">
+							<h3>Engineering Notebook B</h3>
+							<!-- Hosted on Google Drive since the file was too large for GitHub. -->
+							<iframe src="https://drive.google.com/file/d/1eTXa07SoknFWM6s5se4RyhvR1PwrUg03/preview" title="Engineering Notebook B PDF" loading="lazy" allow="autoplay"></iframe>
+							<a href="https://drive.google.com/file/d/1eTXa07SoknFWM6s5se4RyhvR1PwrUg03/view?usp=sharing" target="_blank" rel="noopener noreferrer">Open full size ↗</a>
+						</div>
+						<div class="pdf-embed">
+							<h3>Critical Design Review</h3>
+							<iframe src="downloads/ME72 CDR.pdf" title="Critical Design Review PDF" loading="lazy"></iframe>
+							<a href="downloads/ME72 CDR.pdf" target="_blank" rel="noopener noreferrer">Open full size ↗</a>
+						</div>
+					</div>
+
+					<section style="margin-top: 2rem; text-align: center;">
+						<a href="projects.html" class="button primary">Back to Projects</a>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

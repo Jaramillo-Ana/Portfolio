@@ -11,6 +11,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* --- Embedded PDF grid --- */
+			.pdf-embed-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+				margin: 1.5rem 0 2rem;
+			}
+			@media (max-width: 736px) {
+				.pdf-embed-grid {
+					grid-template-columns: 1fr; /* stack on narrow screens */
+				}
+			}
+			.pdf-embed h3 {
+				margin-bottom: 0.5rem;
+			}
+			.pdf-embed iframe {
+				width: 100%;
+				height: 500px;
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 4px;
+				background: #fff; /* PDF canvas is white regardless of page theme */
+			}
+			.pdf-embed a {
+				display: inline-block;
+				margin-top: 0.5rem;
+				font-size: 0.85rem;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -70,7 +99,7 @@
                                   allowfullscreen>
                                 </iframe>
                               </section>
-							<p>Work In Progress</p>
+							
 							<p>My project involves creating a multi-camera head design for the Unitree G1 Humanoid robot that integrates several Intel RealSense RGB-D sensors with an NVIDIA Jetson computer. I developed custom scripts in ROS2 and Python to synchronize the cameras, process point cloud data, and align the sensors so that their combined view produces a comprehensive picture of the robot’s surroundings.</p>
                             <p>On the mechanical side, I designed and 3D printed a camera holder in SolidWorks to mount the sensors at optimized angles, making sure the data can be geometrically aligned. </p>
                             <p>I also built two complete perception pipelines: one that runs live on the Jetson for real-time multi-camera fusion, and another that converts incoming point cloud data into 3D heightfield simulations in MuJoCo. These pipelines allowed us to validate perception strategies both on hardware and in simulation.</p>
@@ -78,15 +107,19 @@
                             <p>
                                 <a href="https://youtu.be/D5BvHe2A-70" target="_blank">Heightfield rendering Video</a>
                             </p>
-                            <p>
-                                <a href="downloads/Copia de SURF2025_final_report.docx.pdf" target="_blank">View Current Research Report</a>
-                            </p>	
-                            <p>
-                                <a href="downloads/abstract.pdf" target="_blank">View Research Abstract</a>
-                            </p>
-                            
-                              
-                            
+
+                            <div class="pdf-embed-grid">
+                                <div class="pdf-embed">
+                                    <h3>Current Research Report</h3>
+                                    <iframe src="downloads/Copia de SURF2025_final_report.docx.pdf" title="Current Research Report PDF" loading="lazy"></iframe>
+                                    <a href="downloads/Copia de SURF2025_final_report.docx.pdf" target="_blank" rel="noopener noreferrer">Open full size ↗</a>
+                                </div>
+                                <div class="pdf-embed">
+                                    <h3>Research Abstract</h3>
+                                    <iframe src="downloads/abstract.pdf" title="Research Abstract PDF" loading="lazy"></iframe>
+                                    <a href="downloads/abstract.pdf" target="_blank" rel="noopener noreferrer">Open full size ↗</a>
+                                </div>
+                            </div>
 
 					</div>
                    
