@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ana Jaramillo Portfolio - Wing Manufacturing Process Engineering Internship</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* --- Gallery image sizing ---
+			   Uniform box so the grid stays even while images load, but the
+			   image is never cropped: object-fit: contain letterboxes it
+			   inside the box instead of cutting off any part of the photo. */
+			.box.alt .image.fit {
+				display: block;
+				position: relative;
+				aspect-ratio: 4 / 3;
+				overflow: hidden;
+				border-radius: 4px;
+				background: #fff; /* fills the letterboxed space around the image */
+			}
+			.box.alt .image.fit img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;   /* show the whole image, no cropping */
+				object-position: center;
+			}
+
+			/* --- Hero photo row (top images): bigger, taller boxes --- */
+			.hero-gallery .image.fit {
+				aspect-ratio: 1 / 1;
+				min-height: 320px;
+			}
+			@media (max-width: 736px) {
+				.hero-gallery .image.fit {
+					min-height: 220px;
+				}
+			}
+
+			/* --- Centered image row ---
+			   For rows where the images shouldn't stretch across the full
+			   grid (e.g. only 2 images, or a single image) — this centers
+			   them as a group instead of leaving them left-aligned with
+			   empty grid columns next to them. */
+			.centered-row {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				gap: 1.5rem;
+				margin: 1.5rem 0;
+			}
+			.centered-row .image.fit {
+				display: block;
+				position: relative;
+				width: 340px;
+				max-width: 90%;
+				aspect-ratio: 4 / 3;
+				overflow: hidden;
+				border-radius: 4px;
+				background: #fff;
+			}
+			.centered-row .image.fit img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				object-position: center;
+			}
+			.centered-row.single .image.fit {
+				width: 520px;
+			}
+
+			/* --- Embedded PDF grid --- */
+			.pdf-embed-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+				margin: 1.5rem 0 2rem;
+			}
+			@media (max-width: 736px) {
+				.pdf-embed-grid {
+					grid-template-columns: 1fr; /* stack on narrow screens */
+				}
+			}
+			.pdf-embed h3 {
+				margin-bottom: 0.5rem;
+			}
+			.pdf-embed iframe {
+				width: 100%;
+				height: 500px;
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 4px;
+				background: #fff; /* PDF canvas is white regardless of page theme */
+			}
+			.pdf-embed a {
+				display: inline-block;
+				margin-top: 0.5rem;
+				font-size: 0.85rem;
+			}
+
+			/* --- Video demo grid --- */
+			.video-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			@media (max-width: 736px) {
+				.video-grid {
+					grid-template-columns: 1fr; /* stack on narrow screens */
+				}
+			}
+			.video-grid .video-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.video-grid video {
+				width: 100%;
+				height: auto;
+				border-radius: 4px;
+				background: #000;
+			}
+			.video-grid .video-caption {
+				margin-top: 0.5rem;
+				font-size: 0.85rem;
+				text-align: center;
+				opacity: 0.8;
+			}
+
+			/* --- Simple metric/stat row for the Performance section --- */
+			.metric-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1rem;
+				margin: 1.5rem 0 2rem;
+			}
+			@media (max-width: 736px) {
+				.metric-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+			.metric-box {
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 4px;
+				padding: 1rem;
+				text-align: center;
+			}
+			.metric-box .metric-value {
+				font-size: 1.4rem;
+				font-weight: 600;
+				display: block;
+				margin-bottom: 0.25rem;
+			}
+			.metric-box .metric-label {
+				font-size: 0.85rem;
+				opacity: 0.8;
+			}
+
+			/* --- Full, uncropped chart image (e.g. the thermocouple plot) ---
+			   No fixed aspect-ratio box here at all, so nothing is ever
+			   trimmed off the chart — it's shown at its natural proportions,
+			   just scaled to fit the column width. */
+			.chart-image-wrap {
+				text-align: center;
+				margin: 1.5rem 0 2rem;
+			}
+			.chart-image {
+				display: inline-block;
+				max-width: 100%;
+				height: auto;
+				border-radius: 4px;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">
+						<span class="title">Ana Jaramillo</span>
+					</a>
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="involvement.html">Involvement</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<h1>Wing Manufacturing Process Engineering Internship</h1>
+					<p><strong>ESC AutoShrink</strong><br />
+					Manufacturing Process Engineer Intern | June 2026 – September 2026</p>
+
+					<!-- Replace the image names below with your own files. -->
+					<div class="box alt hero-gallery">
+						<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="images/fullimage1.png" alt="ESC AutoShrink machine full build" loading="lazy" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/autoshrinkCAD.png" alt="ESC AutoShrink CAD assembly" loading="lazy" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="images/fullimage2.png" alt="NAV-C modem retention bracket install" loading="lazy" /></span></div>
+						</div>
+					</div>
+
+					<h2>Project Overview</h2>
+					<p>
+						Over the summer of 2026, I worked as a Manufacturing Process Engineer Intern at
+						<strong>Wing</strong>, a drone delivery company, in San Francisco. My work centered on
+						two main projects: designing and building a special purpose machine (SPM) to automate
+						the heat-shrinking process for Electronic Speed Controllers (ESCs), and developing new
+						manufacturing process steps for the NAV-C assembly line.
+					</p>
+					<p>
+						Across both projects, I owned the process end-to-end &mdash; from requirements and
+						brainstorming through mechanical design, electronics, controls, fabrication, testing,
+						and documentation &mdash; with the goal of making manufacturing more consistent,
+						repeatable, and less dependent on manual operator work.
+					</p>
+
+					<h2>Project 1: ESC AutoShrink</h2>
+					<p>
+						<strong>Goal:</strong> Develop a proof-of-concept SPM that automates the heat-shrinking
+						process for ESCs, replacing a fully manual process with something consistent and
+						repeatable.
+					</p>
+					<p>
+						The design I landed on used one heat gun mounted on a horizontal belt-driven linear
+						actuator, paired with a rotary axis that turns the ESC roughly 90&ndash;270&deg;. The two
+						axes work together: the linear axis moves the heat source along the length of the ESC,
+						while rotation changes which face is exposed to heat. I chose this architecture because
+						it kept a small footprint, moved the bulky heat source rather than the ESC and its
+						harness, and left room for future tuning of motion and heating parameters.
+					</p>
+
+					<!-- Component callout: single image, centered -->
+					<div class="centered-row single">
+						<span class="image fit"><img src="images/componentcallout.png" alt="Component callout of the AutoShrink machine" loading="lazy" /></span>
+					</div>
+
+					<h3>Mechanical Design</h3>
+					<p>The mechanical system breaks down into three subsystems:</p>
+					<ul>
+						<li><strong>Linear actuator system:</strong> A FUYU 450&nbsp;mm stroke linear actuator, chosen for its stroke length and aluminum framing. A stepper-driven carriage carries the heat gun via a connector plate and custom mount, with mechanical limit switches added to the frame.</li>
+						<li><strong>Aluminum framing:</strong> Aluminum extrusions gave me the flexibility to tune the frame after fabrication &mdash; especially useful when adjusting the distance between the ESC and the heat gun nozzle.</li>
+						<li><strong>Rotary system:</strong> A linear motion shaft assembly using two flanged bearings and brass shim spacers to eliminate axial play, paired with custom ESC holders (hook mount and pin support) that mate to features already on the ESC for repeatable alignment and datuming.</li>
+					</ul>
+
+					<!-- Rotary system + electronics box: centered pair -->
+					<div class="centered-row">
+						<span class="image fit"><img src="images/rotarySystem.png" alt="Linear motion shaft assembly" loading="lazy" /></span>
+						<span class="image fit"><img src="images/electronicsBox.png" alt="Electronics box" loading="lazy" /></span>
+					</div>
+
+					<h3>Electronics &amp; Control System</h3>
+					<p>
+						The electrical layout was driven by user experience: a single wall connection powers
+						everything, including both stepper motor drivers, the Arduino, and a 30&nbsp;amp relay,
+						through one shared power supply. I designed the power distribution and full electrical
+						schematic, then built and wired a custom electronics box &mdash; complete with a 3D
+						printed enclosure, laser-cut acrylic mounting plate, and a user interface panel with
+						Start, Pause/Resume, Stop, and jog buttons for both motors.
+					</p>
+					<p>
+						On the controls side, I wrote the firmware as a single finite state machine layered on
+						top of a data-driven sequence table, rather than a long hand-written chain of states.
+						States include homing, a multi-pass heating sequence, and an emergency stop, with the
+						speed, position, rotation angle, and dwell points of each pass fully tunable.
+					</p>
+
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="images/powerdiagram.png" alt="Power diagram and electronic schematic" loading="lazy" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="images/electronicSchematic.png" alt="User interface electronics box" loading="lazy" /></span></div>
+						</div>
+					</div>
+
+					<h3>Fabrication, Testing &amp; Performance</h3>
+					<p>
+						Most parts were off-the-shelf components modified in the machine shop, with a small
+						number of fully custom and 3D printed parts. After a dedicated week of testing and
+						tuning, I settled on a four-pass heating sequence &mdash; preheat, then heat each of the
+						ESC's four faces with rotation in between &mdash; with extra dwell time over the
+						MOSFETs, since good heat shrink contact there mattered most for performance.
+					</p>
+
+					<div class="metric-grid">
+						<div class="metric-box">
+							<span class="metric-value">&lt; 180&deg;C</span>
+							<span class="metric-label">Target max board temperature</span>
+						</div>
+						<div class="metric-box">
+							<span class="metric-value">136.8&deg;C</span>
+							<span class="metric-label">Max measured ESC surface temp</span>
+						</div>
+						<div class="metric-box">
+							<span class="metric-value">Pass</span>
+							<span class="metric-label">Leak testing &amp; heat shrink contact</span>
+						</div>
+					</div>
+
+					<!-- Thermocouple chart: full, uncropped, natural proportions -->
+					<div class="chart-image-wrap">
+						<img class="chart-image" src="images/thermoData.png" alt="Heat shrink thermocouple temperature log" loading="lazy" />
+					</div>
+
+					<p>
+						Looking ahead, immediate improvements identified include homing the second motor,
+						adding a feature to detect when the heat gun stops working, further tuning of speed and
+						dwell parameters, and eventually closing the loop with real-time temperature feedback.
+					</p>
+
+					<h2>Lessons Learned</h2>
+					<p>
+						This internship pulled together four areas of growth. In engineering design, I practiced
+						iterating and refining through proof-of-concept development and fixture design. On the
+						manufacturing and hardware side, I gained hands-on experience with off-the-shelf
+						components, soldering, cable modification, and power systems. On process, I learned to
+						use PFMEA to balance risk against a tight schedule. And throughout, I sharpened my
+						technical communication by documenting every stage of the build and asking questions
+						early.
+					</p>
+
+					<!-- Video demos placeholder grid -->
+					<h2>Video Demos</h2>
+					<div class="video-grid">
+						<div class="video-item">
+							<video controls playsinline preload="metadata">
+								<source src="downloads/set-upDemo.MOV" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-caption">AutoShrink Set-Up Demonstration</div>
+						</div>
+						<div class="video-item">
+							<video controls playsinline preload="metadata">
+								<source src="downloads/AutoShrinkfullDemo.MOV" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-caption">AutoShrink Full Cycle Demonstration 8x Speed</div>
+						</div>
+					</div>
+
+					<h2>Skills and Tools</h2>
+					<p><strong>Mechanical Design:</strong> SolidWorks CAD, mechanism design, linear &amp; rotary system design, tolerancing, DFM, design reviews, prototyping, system integration</p>
+					<p><strong>Manufacturing:</strong> Machine shop fabrication, off-the-shelf part modification, 3D printing, laser cutting, assembly, fixture design</p>
+					<p><strong>Electronics and Controls:</strong> Arduino programming, finite state machines, motor drivers, power distribution, relays, wiring, soldering, electrical troubleshooting</p>
+					<p><strong>Process Engineering:</strong> PFMEA, process step design, risk analysis, testing &amp; experimental evaluation, technical documentation</p>
+
+					<h2>Documentation and Links</h2>
+					<ul class="actions" style="flex-wrap: wrap;">
+						<li><a href="https://wing.com/" target="_blank" rel="noopener noreferrer" class="button">Wing Company Website</a></li>
+					</ul>
+
+					<section style="margin-top: 2rem; text-align: center;">
+						<a href="projects.html" class="button primary">Back to Projects</a>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
